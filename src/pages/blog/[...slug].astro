@@ -32,17 +32,12 @@ const { Content } = await post.render();
   author={post.data.author}
   keywords={post.data.keywords}
 >
-  <img
-    src={post.data.heroImage}
-    alt={post.data.description}
-    class="w-full rounded-t-md"
-  />
-  <div class="border-2 rounded-md
-  border-primary-300 dark:border-primary-950 p-4 sm:p-6 my-8">
-    <h1 class="mt-2 mb-4 text-4xl font-semibold">
+  <div class="border-l-2 border-r-2 border-t-2 rounded-t-md
+  border-primary-300 dark:border-primary-950 p-3 sm:p-4">
+    <h1 class="mb-4 text-3xl font-semibold">
       {post.data.title}
     </h1>
-    <p class="text-xl pb-4">{post.data.description}</p>
+    <p class="pb-4">{post.data.description}</p>
     <p class="italic">
       {post.data.author}.{" "}
       <span>
@@ -56,8 +51,13 @@ const { Content } = await post.render();
       </span>
     </p>
   </div>
+  <img
+    src={post.data.heroImage}
+    alt={post.data.description}
+    class="w-full rounded-b-md mb-8"
+  />
 
-  <article class="prose max-w-none prose-slate dark:prose-invert prose-lg">
+  <article class="prose max-w-none prose-slate dark:prose-invert">
     <Content />
   </article>
 </Layout>

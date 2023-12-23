@@ -18,14 +18,14 @@ const {
 }: Props = Astro.props;
 ---
 
-<nav class={`navbar bg-primary-700 text-primary-100 ${className}`}>
+<nav class={`navbar bg-primary-700 text-primary-50 ${className}`}>
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button
           onclick="handleNavbar()"
           type="button"
-          class="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-primary-800 hover:text-primary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          class="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-primary-800 hover:text-primary-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           aria-controls="mobile-menu"
           aria-expanded="false"
         >
@@ -38,7 +38,7 @@ const {
         class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
       >
         <Link href="/" prefetch={true} title={title} description={description}>
-          <div class="flex flex-shrink-0 items-center hover:text-primary-300">
+          <div class="flex flex-shrink-0 items-center hover:text-primary-200">
             <WebXr size={30} title={title} />
             <p class="pl-4 text-2xl font-semibold mt-1">{title}</p>
           </div>

@@ -23,12 +23,12 @@ const {
 </style>
 
 <footer
-  class={`footer bg-primary-700 text-primary-100 text-center md:text-left sm:px-6 lg:px-8 pt-8 pb-10 ${className}`}
+  class={`footer bg-primary-700 text-primary-50 text-center md:text-left sm:px-6 lg:px-8 pt-8 pb-10 ${className}`}
 >
   <div class="mx-auto max-w-7xl md:flex md:justify-between font-medium">
-    <span class="text-base">{`© ${getYear()} ${name}. ${text}`}</span>
+    <span>{`© ${getYear()} ${name}. ${text}`}</span>
     <ul class="flex justify-center md:justify-end gap-4 mt-6 md:mt-0">
-      <Icons icons={icons} className="hover:text-primary-300" />
+      <Icons icons={icons} className="hover:text-primary-200" />
     </ul>
   </div>
 </footer>

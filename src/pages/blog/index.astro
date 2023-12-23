@@ -18,7 +18,7 @@ const posts = (await getCollection("blog")).sort(
 
 <Layout title={`${globals.short_name} - Blog`}>
   <section>
-    <h1 class="my-5 sm:my-10 text-4xl font-semibold">Blog</h1>
+    <h1 class="my-5 sm:my-10 text-3xl font-semibold">Blog</h1>
     <div class="mx-auto grid gap-x-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       {
         posts.map((post) => {

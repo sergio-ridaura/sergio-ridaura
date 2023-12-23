@@ -5,7 +5,7 @@
     "see": "https://docs.npmjs.com/cli/v6/configuring-npm/package-json/"
   },
   "name": "sergio-ridaura",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "keywords": [
     "astro",
