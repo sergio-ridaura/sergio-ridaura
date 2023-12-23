@@ -1,0 +1,63 @@
+---
+export const prerender = true;
+
+import { type CollectionEntry, getCollection } from "astro:content";
+import globals from "../../globals";
+import Layout from "../../layouts/default.astro";
+
+/**
+ * Blog post page.
+ * @see https://docs.astro.build/en/core-concepts/astro-pages/
+ */
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout
+  lang={post.data.lang}
+  title={`${globals.short_name} - ${post.data.title}`}
+  description={post.data.description}
+  image={post.data.heroImage}
+  author={post.data.author}
+  keywords={post.data.keywords}
+>
+  <img
+    src={post.data.heroImage}
+    alt={post.data.description}
+    class="w-full rounded-t-md"
+  />
+  <div class="border-2 rounded-md
+  border-primary-300 dark:border-primary-950 p-4 sm:p-6 my-8">
+    <h1 class="mt-2 mb-4 text-4xl font-semibold">
+      {post.data.title}
+    </h1>
+    <p class="text-xl pb-4">{post.data.description}</p>
+    <p class="italic">
+      {post.data.author}.{" "}
+      <span>
+        {
+          post.data.pubDate.toLocaleDateString(post.data.lang, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }
+      </span>
+    </p>
+  </div>
+
+  <article class="prose max-w-none prose-slate dark:prose-invert prose-lg">
+    <Content />
+  </article>
+</Layout>

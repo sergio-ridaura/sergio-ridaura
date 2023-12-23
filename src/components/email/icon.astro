@@ -1,0 +1,37 @@
+---
+import type Props from "../icon/default.type";
+
+/**
+ * Email icon.
+ */
+const {
+  id = "email_icon",
+  size = 48,
+  viewBox = "0 0 48 33",
+  color = "currentColor",
+  title = "Email",
+  description = "Communicate by email",
+  className = "",
+}: Props = Astro.props;
+---
+
+<svg
+  id={id}
+  height={size}
+  viewBox={viewBox}
+  fill={color}
+  aria-hidden="true"
+  class={`email_icon ${className}`}
+  role="img"
+  aria-label={description}
+>
+  <title>{title}</title>
+  <desc>{description}</desc>
+
+  <path
+    d="m 45.6,-2.9842059 a 3,2.9986838 0 0 0 -0.615,0 h -42 A 3,2.9986838 0 0 0 2.19,-2.8642586 L 23.865,18.711272 Z"
+  ></path>
+  <path
+    d="M 47.82,-0.90012075 25.98,20.840337 a 3,2.9986838 0 0 1 -4.23,0 L 0.105,-0.73519315 A 3,2.9986838 0 0 0 0,0.01447785 V 30.001316 A 3,2.9986838 0 0 0 3,33 h 42 a 3,2.9986838 0 0 0 3,-2.998684 V 0.01447785 a 3,2.9986838 0 0 0 -0.18,-0.9145986 z M 5.055,30.001316 H 2.97 v -2.144059 l 10.905,-10.810255 2.115,2.114072 z m 39.915,0 h -2.1 L 31.935,19.161074 34.05,17.047002 44.955,27.857257 Z"
+  ></path>
+</svg>

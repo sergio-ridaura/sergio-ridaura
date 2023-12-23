@@ -1,0 +1,11 @@
+{
+  "info": {
+    "description": "TypeScript configuration.",
+    "see": "https://www.typescriptlang.org/docs/handbook/tsconfig-json.html"
+  },
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  }
+}

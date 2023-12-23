@@ -1,0 +1,62 @@
+{
+  "info": {
+    "description": "Npm project configuration.",
+    "note": "Development information.",
+    "see": "https://docs.npmjs.com/cli/v6/configuring-npm/package-json/"
+  },
+  "name": "astro-blog",
+  "version": "1.5.0",
+  "private": true,
+  "keywords": [
+    "astro",
+    "typescript",
+    "tailwindcss",
+    "react",
+    "node"
+  ],
+  "description": "My theme for developing a blog with Astro.js, TypeScript, TailwindCSS, React.js and Node.js.",
+  "author": {
+    "name": "Sergio Ridaura",
+    "url": "https://sergio-ridaura.vercel.app",
+    "email": "sergio.ridaura@outlook.com"
+  },
+  "theme": "Astro.js Blog",
+  "type": "module",
+  "scripts": {
+    "astro": "astro",
+    "build:node": "astro check && astro build --node",
+    "build": "astro check && astro build",
+    "clean": "rm -R .astro dist .vercel; npx astro telemetry disable; npx astro preferences disable devToolbar;",
+    "dev": "astro dev --host",
+    "preview": "astro preview --host --node",
+    "start": "astro dev",
+    "test:clean": "rm -R coverage; find . -type d -name '__snapshots__' -exec rm -r {} +; find . -type d -name '__logs__' -exec rm -r {} +; find . -type d -name '__performances__' -exec rm -r {} +;",
+    "test:doc": "npx astro check; vitest --coverage --silent",
+    "test:talk": "vitest",
+    "test": "npx astro check; vitest --silent"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "@astrojs/mdx": "^2.0.2",
+    "@astrojs/node": "^7.0.2",
+    "@astrojs/react": "^3.0.8",
+    "@astrojs/rss": "^4.0.1",
+    "@astrojs/sitemap": "^3.0.3",
+    "@astrojs/tailwind": "^5.0.4",
+    "@astrojs/vercel": "^6.1.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
+    "@vitest/coverage-v8": "^1.1.0",
+    "astro": "^4.0.7",
+    "astro-webmanifest": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0"
+  }
+}

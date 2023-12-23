@@ -1,0 +1,36 @@
+---
+import type Props from "../icon/default.type";
+
+/**
+ * Menu icon.
+ */
+const {
+  id = "menu_icon",
+  size = 48,
+  viewBox = "0 0 48 48",
+  color = "currentColor",
+  title = "Menu",
+  description = "Menu",
+  className = "",
+}: Props = Astro.props;
+---
+
+<svg
+  id={id}
+  height={size}
+  viewBox={viewBox}
+  fill={color}
+  aria-hidden="true"
+  class={`menu_icon ${className}`}
+  role="img"
+  aria-label={description}
+>
+  <title>{title}</title>
+  <desc>{description}</desc>
+
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M 2.45525,2.45525 H 45.544746 M 2.45525,23.999998 H 45.544746 M 2.45525,45.544746 h 43.089496"
+    style=`stroke-width:4.9105; stroke:${color};`></path>
+</svg>

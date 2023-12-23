@@ -1,0 +1,61 @@
+---
+export const prerender = true;
+
+import { getCollection } from "astro:content";
+import globals from "../../globals";
+import Layout from "../../layouts/default.astro";
+import Link from "../../components/link/default.astro";
+
+/**
+ * Blog page.
+ * @see https://docs.astro.build/en/core-concepts/astro-pages/
+ */
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<Layout title={`${globals.short_name} - Blog`}>
+  <section>
+    <h1 class="my-5 sm:my-10 text-4xl font-semibold">Blog</h1>
+    <div class="mx-auto grid gap-x-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+      {
+        posts.map((post) => {
+          return (
+            <article class="mb-8">
+              <Link
+                href={`/blog/${post.slug}/`}
+                title={post.data.title}
+                prefetch={true}
+              >
+                <img
+                  src={post.data.heroImage}
+                  alt={post.data.description}
+                  class="w-full rounded-t-md"
+                />
+                <div
+                  class="border-l-2 border-r-2 border-b-2 rounded-b-md
+         border-primary-300 dark:border-primary-950 p-4 sm:p-6"
+                >
+                  <h2 class="text-2xl pb-4">{post.data.title}</h2>
+                  <p class="pb-4">{post.data.description}</p>
+                  <p class="italic">
+                    {post.data.author}.{" "}
+                    <span>
+                      {post.data.pubDate.toLocaleDateString(post.data.lang, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </p>
+                </div>
+              </Link>
+            </article>
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>

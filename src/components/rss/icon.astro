@@ -1,0 +1,34 @@
+---
+import type Props from "../icon/default.type";
+
+/**
+ * RSS icon.
+ */
+const {
+  id = "rss_icon",
+  size = 48,
+  viewBox = "0 0 48 48",
+  color = "currentColor",
+  title = "RSS",
+  description = "RSS",
+  className = "",
+}: Props = Astro.props;
+---
+
+<svg
+  id={id}
+  height={size}
+  viewBox={viewBox}
+  fill={color}
+  aria-hidden="true"
+  class={`rss_icon ${className}`}
+  role="img"
+  aria-label={description}
+>
+  <title>{title}</title>
+  <desc>{description}</desc>
+
+  <path
+    d="M 6,0 A 6,6 0 0 0 0,6 v 36 a 6,6 0 0 0 6,5.999997 H 42 A 6,6 0 0 0 48,42 V 6 A 6,6 0 0 0 42,0 Z m 4.5,7.5 c 16.569,0 30,13.431 30,30 a 3,3 0 1 1 -6,0 24,24 0 0 0 -24,-24 3,3 0 0 1 0,-6 z m 0,12 a 18,18 0 0 1 18,18 3,3 0 1 1 -6,0 12,12 0 0 0 -12,-12 3,3 0 0 1 0,-6 z m 1.5,21 a 4.5,4.5 0 1 1 0,-9 4.5,4.5 0 0 1 0,9 z"
+  ></path></svg
+>

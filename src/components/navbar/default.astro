@@ -1,0 +1,120 @@
+---
+import globals from "../../globals";
+import type Props from "./default.type";
+import WebXr from "../webXr/icon.astro";
+import Menu from "../menu/icon.astro";
+import Link from "../link/default.astro";
+import global from "../../globals";
+import type LinkType from "../link/default.type";
+
+/**
+ * Navbar
+ */
+const {
+  title = globals.short_name,
+  description = global.description,
+  className = "",
+  links = [],
+}: Props = Astro.props;
+---
+
+<nav class={`navbar bg-primary-700 text-primary-100 ${className}`}>
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button
+          onclick="handleNavbar()"
+          type="button"
+          class="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-primary-800 hover:text-primary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="absolute -inset-0.5" id="mobile-menu-button"></span>
+          <span class="sr-only">Open main menu</span>
+          <Menu size={18} />
+        </button>
+      </div>
+      <div
+        class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+      >
+        <Link href="/" prefetch={true} title={title} description={description}>
+          <div class="flex flex-shrink-0 items-center hover:text-primary-300">
+            <WebXr size={30} title={title} />
+            <p class="pl-4 text-2xl font-semibold mt-1">{title}</p>
+          </div>
+        </Link>
+      </div>
+      <div
+        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+      >
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            {
+              links.map((link: LinkType) => (
+                <Link
+                  title={link.title}
+                  href={link.href}
+                  description={link.description}
+                  prefetch={link.prefetch}
+                  target={link.target}
+                  className={`rounded-md px-3 py-2 font-medium ${
+                    Astro.url?.pathname === link.href ||
+                    (link.href == "/blog" &&
+                      Astro.url?.pathname.includes("blog"))
+                      ? "bg-primary-950"
+                      : "hover:bg-primary-800"
+                  }`}
+                  aria-current="page"
+                >
+                  {link.title}
+                </Link>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sm:hidden">
+    <div id="mobile-menu" class="space-y-1 px-2 pb-3 pt-2 hidden">
+      {
+        links.map((link: LinkType) => (
+          <Link
+            title={link.title}
+            href={link.href}
+            description={link.description}
+            prefetch={link.prefetch}
+            target={link.target}
+            className={`rounded-md block px-3 py-2 ${
+              Astro.url?.pathname === link.href ||
+              (link.href == "/blog" && Astro.url?.pathname.includes("blog"))
+                ? "bg-primary-950"
+                : "hover:bg-primary-800"
+            }`}
+            aria-current="page"
+          >
+            {link.title}
+          </Link>
+        ))
+      }
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  function handleNavbar() {
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.remove("hidden");
+    } else {
+      mobileMenu.classList.add("hidden");
+    }
+  }
+
+  document.body.addEventListener("click", function (event) {
+    if (event.target.id !== "mobile-menu-button") {
+      document.getElementById("mobile-menu").classList.add("hidden");
+    }
+  });
+</script>

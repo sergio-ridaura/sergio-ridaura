@@ -1,0 +1,39 @@
+---
+import Link from "../link/default.astro";
+import Svg from "./icon.astro";
+import type Props from "../icon/defaultLink.type";
+
+/**
+ * GitHub icon with link.
+ */
+const {
+  id,
+  size,
+  viewBox,
+  color,
+  title = "GitHub",
+  description = "Visit my repositories on GitHub",
+  className,
+  href,
+  target,
+  prefetch,
+}: Props = Astro.props;
+---
+
+<Link
+  title={title}
+  description={description}
+  href={href}
+  target={target}
+  prefetch={prefetch}
+>
+  <Svg
+    id={id}
+    size={size}
+    viewBox={viewBox}
+    color={color}
+    title={title}
+    description={description}
+    className={className}
+  />
+</Link>

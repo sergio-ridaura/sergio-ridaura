@@ -1,0 +1,47 @@
+---
+import Blog from "../blog/iconLink.astro";
+import Email from "../email/iconLink.astro";
+import GitHub from "../github/iconLink.astro";
+import Linkedin from "../linkedin/iconLink.astro";
+import Rss from "../rss/iconLink.astro";
+import type {
+  IconsLinkType as Props,
+  IconsLinkElementType,
+  IconsLinkMapType,
+} from "./defaultLink.type";
+import type IconLinkType from "../icon/defaultLink.type";
+
+/**
+ * Icons with links.
+ */
+const { icons, className = "" }: Props = Astro.props;
+---
+
+{
+  icons &&
+    Array.isArray(icons) &&
+    icons.map((icon: IconsLinkElementType) => {
+      const iconProps: IconLinkType = {
+        id: icon.id,
+        size: icon.size,
+        color: icon.color,
+        className: icon.className,
+        description: icon.description,
+        href: icon.href,
+        target: icon.target,
+        prefetch: icon.prefetch,
+      };
+
+      const iconComponentMap: IconsLinkMapType = {
+        blog: <Blog {...iconProps} />,
+        email: <Email {...iconProps} />,
+        github: <GitHub {...iconProps} />,
+        linkedin: <Linkedin {...iconProps} />,
+        rss: <Rss {...iconProps} />,
+      };
+
+      return (
+        <li class={`icons_link ${className}`}>{iconComponentMap[icon.type]}</li>
+      );
+    })
+}

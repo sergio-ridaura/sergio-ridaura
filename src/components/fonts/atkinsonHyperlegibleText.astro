@@ -1,0 +1,23 @@
+---
+import "./atkinsonHyperlegible.css";
+import classDefault from "../class/default";
+import idDefault from "../id/default";
+import type Props from "./text.type";
+
+/**
+ * Text with Atkinson Hyperlegible font.
+ */
+const {
+  id,
+  text = "Atkinson Hyperlegible",
+  className,
+  addClass,
+}: Props = Astro.props;
+---
+
+<span
+  id={idDefault(id, "font_atkinson_hyperlegible_text")}
+  class={classDefault(className, addClass, "font_atkinson_hyperlegible_text")}
+>
+  {text}
+</span>

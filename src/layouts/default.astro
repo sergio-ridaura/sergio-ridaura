@@ -1,0 +1,51 @@
+---
+import "../components/fonts/atkinsonHyperlegible.css";
+import { Analytics } from "@vercel/analytics/react";
+import { icons, links } from "./default.conf";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/footer/default.astro";
+import Metadata from "../components/metadata/default.astro";
+import Navbar from "../components/navbar/default.astro";
+import type Props from "./default.type";
+
+/**
+ * Layout.
+ * @see https://docs.astro.build/en/core-concepts/layouts/
+ */
+const {
+  lang = "en",
+  theme = "light",
+  title,
+  description,
+  image,
+  author,
+  keywords,
+}: Props = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} class={`${theme} font-sans`}>
+  <head>
+    <Metadata
+      title={title}
+      description={description}
+      image={image}
+      author={author}
+      keywords={keywords}
+    />
+    <ViewTransitions />
+  </head>
+  <body
+    class="bg-light dark:bg-dark text-lg text-dark dark:text-light font-AtkinsonHyperlegible"
+  >
+    <Navbar links={links} />
+
+    <main class="main mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-8 mb-12">
+      <slot />
+      <Analytics client:only />
+      <SpeedInsights client:only />
+    </main>
+    <Footer icons={icons} />
+  </body>
+</html>

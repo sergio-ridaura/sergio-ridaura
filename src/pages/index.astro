@@ -1,0 +1,17 @@
+---
+export const prerender = true;
+
+import Layout from "../layouts/default.astro";
+import Content from "../../README.md";
+
+/**
+ * Home Page.
+ * @see https://docs.astro.build/en/core-concepts/astro-pages/
+ */
+---
+
+<Layout>
+  <article class="prose max-w-none prose-slate dark:prose-invert prose-lg pt-2">
+    <Content />
+  </article>
+</Layout>

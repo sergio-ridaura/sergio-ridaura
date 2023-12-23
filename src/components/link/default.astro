@@ -1,0 +1,36 @@
+---
+import type Props from "./default.type";
+
+/**
+ * HTML link.
+ */
+const {
+  id,
+  title,
+  description="",
+  href,
+  target = "_self",
+  prefetch = false,
+  className = "",
+}: Props = Astro.props;
+---
+
+{
+  href === undefined ? (
+    <>
+      <slot />
+    </>
+  ) : (
+    <a
+      id={id}
+      title={title}
+      aria-label={description}
+      href={href}
+      target={target}
+      class={className ? className : null}
+      {...(prefetch ? {"data-astro-prefetch": true} : "")}
+    >
+      <slot />
+    </a>
+  )
+}

@@ -1,0 +1,46 @@
+---
+import type Props from "../icon/default.type";
+
+/**
+ * WebXR icon color.
+ */
+const {
+  id = "webxr_icon_color",
+  size = 48,
+  viewBox = "-8 0 48 48",
+  color = "currentColor",
+  title = "WebXR",
+  description = "WebXR",
+  className = "",
+}: Props = Astro.props;
+---
+
+<svg
+  id={id}
+  height={size}
+  viewBox={viewBox}
+  fill={color}
+  aria-hidden="true"
+  class={`webxr_icon_color ${className}`}
+  role="img"
+  aria-label={description}
+>
+  <title>{title}</title>
+  <desc>{description}</desc>
+
+  <path
+    d="M 3.7857575,45.189983 C 3.0415717,43.456232 -5.569863,23.230092 -5.569863,23.230092 c 0,0 -2.0104592,-4.666537 5.21519284,-7.982123 C 6.8709815,11.932386 15.667803,7.7571266 15.667803,7.7571266 V 39.454971 c 0,0 -5.207274,5.045858 -7.2668098,7.068566 -1.8713881,1.838271 -3.8679267,0.40849 -4.6151156,-1.332474 z"
+    fill="white"
+    stroke-width="1"
+    style="stroke: black"></path>
+  <path
+    d="m 27.550568,45.189983 c 0.744175,-1.733751 9.355621,-21.959891 9.355621,-21.959891 0,0 2.01046,-4.666537 -5.215193,-7.982123 C 24.465345,11.932386 15.668524,7.7571266 15.668524,7.7571266 V 39.454971 c 0,0 5.207274,5.045858 7.266809,7.068566 1.871386,1.838271 3.867928,0.40849 4.615115,-1.332474 z M 15.668043,7.7561666 0.73509316,0.67656172 c 0,0 -3.18145616,-1.37015384 -2.38423226,3.01162528 l 2.0403363,11.216706 z"
+    fill="red"
+    stroke-width="1"
+    style="stroke: black"></path>
+  <path
+    d="M 15.667803,7.7564065 30.600752,0.67680172 c 0,0 3.181458,-1.37015384 2.384234,3.01162528 l -2.040337,11.216705 z"
+    fill="white"
+    stroke-width="1"
+    style="stroke: black"></path>
+</svg>

@@ -1,0 +1,44 @@
+---
+import Blog from "../blog/icon.astro";
+import Email from "../email/icon.astro";
+import GitHub from "../github/icon.astro";
+import Linkedin from "../linkedin/icon.astro";
+import Rss from "../rss/icon.astro";
+import type {
+  IconsType as Props,
+  IconsElementType,
+  IconsMapType,
+} from "./default.type";
+import type IconType from "../icon/default.type";
+
+/**
+ * Icons.
+ */
+const { icons, className = "" }: Props = Astro.props;
+---
+
+{
+  icons &&
+    Array.isArray(icons) &&
+    icons.map((icon: IconsElementType) => {
+      const iconProps: IconType = {
+        id: icon.id,
+        size: icon.size,
+        color: icon.color,
+        className: icon.className,
+        description: icon.description,
+      };
+
+      const iconComponentMap: IconsMapType = {
+        blog: <Blog {...iconProps} />,
+        email: <Email {...iconProps} />,
+        github: <GitHub {...iconProps} />,
+        linkedin: <Linkedin {...iconProps} />,
+        rss: <Rss {...iconProps} />,
+      };
+
+      return (
+        <li class={`icons ${className}`}>{iconComponentMap[icon.type]}</li>
+      );
+    })
+}

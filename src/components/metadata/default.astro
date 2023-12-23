@@ -1,0 +1,54 @@
+---
+import getDate from "../date/get";
+import globals from "../../globals";
+import pack from "../../../package.json";
+import type Props from "./default.type";
+
+/**
+ * HTML head metadata.
+ */
+const {
+  title = globals.name,
+  description = globals.description,
+  image = "/images/placeholder/default.jpg",
+  author = `${globals.author?.name} - ${globals.author?.email} - ${globals.author?.url}`,
+  keywords = globals.keywords.join(", "),
+}: Props = Astro.props;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="canonical" href={Astro.url.href} />
+
+<title>{title}</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+<meta
+  name="developer"
+  content={`${pack.author?.name} - ${pack.author?.email} - ${pack.author?.url}`}
+/>
+<meta name="version" content={pack.version} />
+<meta name="date" content={getDate()} />
+<meta name="generator" content={Astro.generator} />
+<meta
+  name="theme"
+  content=`${pack.theme} by Sergio Ridaura - https://sergio-ridaura.vercel.app`
+/>
+<meta name="environment" content={import.meta.env.MODE} />
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image:alt" content={title} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content="website" />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:site" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
