@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="73.141479"
+   height="27.239956"
+   role="img"
+   aria-label="PWA"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="blog.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="6.7498736"
+     inkscape:cx="43.037843"
+     inkscape:cy="11.333546"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14" />
+  <title
+     id="title2">PWA</title>
+  <rect
+     width="75"
+     height="30"
+     fill="#5a0fc8"
+     id="rect4"
+     x="0"
+     y="0"
+     style="fill:#4400aa;fill-opacity:1;stroke-width:1.04383;shape-rendering:crispEdges" />
+  <text
+     xml:space="preserve"
+     style="font-size:10px;line-height:0;font-family:Verdana, Geneva, 'DejaVu Sans', sans-serif;-inkscape-font-specification:'Verdana, Geneva, DejaVu Sans, sans-serif';letter-spacing:1px;fill:#ffffff"
+     x="32.402481"
+     y="17.704962"
+     id="text20033"><tspan
+       sodipodi:role="line"
+       id="tspan20031"
+       x="32.402481"
+       y="17.704962"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Verdana, Geneva, 'DejaVu Sans', sans-serif;-inkscape-font-specification:'Verdana, Geneva, DejaVu Sans, sans-serif Bold';fill:#ffffff">BLOG</tspan></text>
+  <metadata
+     id="metadata845">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>PWA</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="m 13.706723,20.221115 c -0.221196,-0.515303 -2.780799,-6.526866 -2.780799,-6.526866 0,0 -0.597596,-1.386954 1.550114,-2.372406 2.147711,-0.985451 4.76236,-2.2263838 4.76236,-2.2263838 v 9.4208838 c 0,0 -1.547778,1.49968 -2.159938,2.100859 -0.556242,0.546359 -1.149671,0.121408 -1.371737,-0.396042 z"
+     fill="#ffffff"
+     id="path2"
+     style="fill:#ffffff;stroke:#ff0000;stroke-width:0.277989;stroke-miterlimit:2;stroke-dasharray:none" />
+  <path
+     d="m 20.770211,20.221115 c 0.221196,-0.515303 2.780799,-6.526866 2.780799,-6.526866 0,0 0.597596,-1.386954 -1.550114,-2.372406 -2.147711,-0.985451 -4.76236,-2.2263838 -4.76236,-2.2263838 v 9.4208838 c 0,0 1.547778,1.49968 2.159938,2.100859 0.556242,0.546359 1.14967,0.121408 1.371737,-0.396042 z M 17.238398,9.0952362 12.799681,6.9911101 c 0,0 -0.945648,-0.4072299 -0.708698,0.8951003 l 0.606481,3.3337356 z"
+     fill="#ff0202"
+     id="path4"
+     style="fill:#ff0000;stroke:#ff0000;stroke-width:0.277989;stroke-miterlimit:2;stroke-dasharray:none" />
+  <path
+     d="m 17.238398,9.0952362 4.438717,-2.1041261 c 0,0 0.945649,-0.4072299 0.708699,0.8951003 l -0.606481,3.3337356 z"
+     fill="#ffffff"
+     id="path6"
+     style="fill:#ffffff;stroke:#ff0000;stroke-width:0.277989;stroke-miterlimit:2;stroke-dasharray:none" />
+</svg>

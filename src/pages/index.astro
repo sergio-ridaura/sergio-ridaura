@@ -2,7 +2,6 @@
 export const prerender = true;
 
 import Layout from "../layouts/default.astro";
-import Content from "../../README.md";
 
 /**
  * Home Page.
@@ -11,7 +10,5 @@ import Content from "../../README.md";
 ---
 
 <Layout>
-  <article class="prose max-w-none prose-slate dark:prose-invert prose-lg pt-2">
-    <Content />
-  </article>
+  <h1 class="my-5 sm:my-10 text-4xl font-semibold">Home</h1>
 </Layout>

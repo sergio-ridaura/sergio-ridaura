@@ -1,8 +1,8 @@
 ---
 title: "New Project"
 author: "sergio.ridaura@outlook.com"
-pubDate: "2023-12-19"
-updatedDate: "2023-12-19"
+pubDate: "2023-12-18"
+updatedDate: "2023-12-18"
 dueDate: "2024-01-01"
 order: 1
 ---
