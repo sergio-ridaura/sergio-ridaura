@@ -4,8 +4,8 @@
     "note": "Development information.",
     "see": "https://docs.npmjs.com/cli/v6/configuring-npm/package-json/"
   },
-  "name": "astro-blog",
-  "version": "1.5.0",
+  "name": "sergio-ridaura",
+  "version": "1.0.0",
   "private": true,
   "keywords": [
     "astro",
@@ -14,7 +14,7 @@
     "react",
     "node"
   ],
-  "description": "My theme for developing a blog with Astro.js, TypeScript, TailwindCSS, React.js and Node.js.",
+  "description": "My personal site. Sergio Ridaura.",
   "author": {
     "name": "Sergio Ridaura",
     "url": "https://sergio-ridaura.vercel.app",

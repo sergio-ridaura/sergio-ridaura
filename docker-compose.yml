@@ -9,7 +9,7 @@ services:
 
   node:
     image: node
-    container_name: node_astro-blog
+    container_name: node_sergio-ridaura
     ports:
       - 4321:4321
       - 80:80

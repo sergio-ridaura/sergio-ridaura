@@ -13,9 +13,9 @@ export default {
       /** Light and dark */
       transparent: colors.transparent,
       light: colors.white,
-      dark: colors.black,
+      dark: "#111",
       /** Type */
-      primary: colors.blue,
+      primary: colors.red,
       secondary: colors.orange,
       success: colors.green,
       danger: colors.red,

@@ -6,14 +6,14 @@ import type GlobalsType from "./globals.type";
  * @note product information
  */
 const globals: GlobalsType = {
-  name: "Astro.js Blog",
-  short_name: "Astro Blog",
+  name: "Sergio Ridaura",
+  short_name: "Sergio Ridaura",
   description: pack.description,
   author: pack.author,
   keywords: pack.keywords,
-  site: "https://astro-blog-sr.vercel.app",
+  site: "https://sergio-ridaura.vercel.app",
   manifest: {
-    theme_color: "#007bff",
+    theme_color: "#ff0000",
     background_color: "#000000",
   },
 };
